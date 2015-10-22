@@ -62,7 +62,7 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
-map <s-f> :% ! php_beautifier --filters "phpBB() EqualsAlign() ArrayNested()"<CR>
+map <s-f> :% ! php_beautifier --filters "phpBB() IndentStyles(style=k&r) ArrayNested() NewLines(before=if:switch:foreach:elseif:else:T_CLASS,after=T_COMMENT)"<CR>
 "map <c-f> :call JsBeautify()<cr>
 " or
 " autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
